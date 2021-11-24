@@ -1,26 +1,30 @@
 //imports
 import { MapContainer, TileLayer, Polygon, GeoJSON } from "react-leaflet";
-import countyBoundary from "../data/countyBorder.js";
+import borderData from "../data/border.js";
+import countyBoundary from "../data/countyBorder.js"
 
 function Map(props) {
+  let vtOutline = borderData.geometry.coordinates[0].map((coords) => [
+    coords[1],
+    coords[0],
+  ]);
+
   return (
     <MapContainer
       center={props.center}
       zoom={8}
       scrollWheelZoom={false}
       doubleClickZoom={false}
-      zoomControl={false}
+      zoomControl={true}
       touchZoom={false}
-      dragging={false}
-      zoomDelta={0}
-      keyboard={false}
+      dragging={true}
       style={{ height: "600px", width: "600px" }}
     >
-      <TileLayer
+   <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
-      <GeoJSON data={countyBoundary} style={{fillColor: '#ff6863', fillOpacity: 0.5, color: 'black', weight: 1, opacity: 1,  }} />
+      <GeoJSON data={countyBoundary} />
     </MapContainer>
   );
 }
