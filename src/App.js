@@ -1,28 +1,22 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useState } from "react";
 // import MapDisplay from "./components/MapDisplay"
-import Map from './components/Map'
-import Home from './components/Home'
-import About from './components/About'
-import Contact from './components/Contact'
+import Map from "./components/Map";
 
-function App (props) {
+function App(props) {
+  const [center, setCenter] = useState([43.88, -72.7317]);
+  const [zoom, setZoom] = useState(8);
+
   return (
-    <div id='layout'>
-      <BrowserRouter>
-        {/* <Navigation /> */}
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-          {/* <Route path='/counties/' element={<Counties />} />
-      <Route path='/counties/:county' element={<County />} /> */}
-          <Route path='/map' element={<Map />} /> {/* <MapDisplay /> */}
-        </Routes>
-        {/* <Footer /> */}
-      </BrowserRouter>
+    <div id="layout">
+      <Map
+        center={center}
+        setCenter={setCenter}
+        zoom={zoom}
+        setZoom={setZoom}
+      />{" "}
+      {/* <MapDisplay /> */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
