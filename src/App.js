@@ -1,16 +1,17 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import MapDisplay from "./components/MapDisplay"
-import Map from './components/Map'
+import Map from "./components/Map";
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
+import Nav from "./components/Nav"
 
 function App (props) {
   return (
-    <div id='layout'>
+    <div>
       <BrowserRouter>
         {/* <Navigation /> */}
+        <Nav />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -25,4 +26,4 @@ function App (props) {
   )
 }
 
-export default App
+export default App;
