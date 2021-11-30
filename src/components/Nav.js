@@ -43,11 +43,14 @@ export default function Nav () {
         <Typography variant='h6' className={classes.title}>
           Health Care Debt in Vermont
         </Typography>
+        <Button color='inherit' component={Link} to='/'>
+          Home
+        </Button>
         <Button color='inherit' component={Link} to='/about'>
-          About Us
+          About
         </Button>
         <Button color='inherit' component={Link} to='/contact'>
-          Contact Us
+          Contact
         </Button>
       </Toolbar>
     </AppBar>
