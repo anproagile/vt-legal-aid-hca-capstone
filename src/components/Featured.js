@@ -37,7 +37,7 @@ export default function Featured(props) {
 
   //function to generate a random number based on the length of the all stories array
   function randomNumber() {
-    return Math.floor(Math.random() * (allStories.length - 1));
+    return Math.floor(Math.random() * (allStories.length - 1) + 1);
   }
 
   return (
