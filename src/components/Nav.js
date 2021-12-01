@@ -29,12 +29,8 @@ export default function Nav () {
     setOpen(false)
   }
 
-  const style = {
-    background: '#205A3E'
-  }
-
   return (
-    <AppBar style={{ backgroundColor: '#205A3E' }} position='static'>
+    <AppBar position='static'>
       <Toolbar>
         <IconButton
           edge='start'
@@ -44,17 +40,14 @@ export default function Nav () {
         >
           <MenuIcon />
         </IconButton>
-        <Typography variant='h4' className={classes.title}>
+        <Typography variant='h6' className={classes.title}>
           Health Care Debt in Vermont
         </Typography>
-        <Button color='inherit' component={Link} to='/'>
-          Home
-        </Button>
         <Button color='inherit' component={Link} to='/about'>
-          About
+          About Us
         </Button>
         <Button color='inherit' component={Link} to='/contact'>
-          Contact
+          Contact Us
         </Button>
       </Toolbar>
     </AppBar>
