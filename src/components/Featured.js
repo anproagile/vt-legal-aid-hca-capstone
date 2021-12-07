@@ -40,7 +40,6 @@ export default function Featured(props) {
   }
   return (
     <>
-
       <div>
         <Graph />
       </div>
