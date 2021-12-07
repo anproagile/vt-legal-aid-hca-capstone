@@ -59,7 +59,7 @@ export default function Featured (props) {
           {allStories.length ? allStories[randomStories[0]].Insured : null}
         </div>
         <div>
-          Age: {allStories.length ? allStories[randomStories[0]].Age : null}
+         <b> Age:</b> {allStories.length ? allStories[randomStories[0]].Age : null}
         </div>
       </div>
       <div>
